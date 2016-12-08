@@ -570,10 +570,33 @@ ol.type li a:hover {
 #testimonial {
 	padding: 0;
 }
+@keyframes show1{
+	from{
+		opacity: 0;
+		transform: scale(0);
+		
+	}
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+#testimonial .item-box{
+	height: 140px;
+	position: relative;
+	overflow: hidden;
+}
 #testimonial .item {
 	display: block;
 	width: 100%;
 	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+#testimonial .active1{
+	animation: show1 0.35s ease-in-out 0s forwards;
 }
 #testimonial .item p {
 	font-weight: 500;
@@ -653,6 +676,10 @@ label {
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
 }
 #contact .form-control:focus {
 	border-color: inherit;
